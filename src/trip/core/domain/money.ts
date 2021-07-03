@@ -13,7 +13,7 @@ export class Money {
 
   static of(value: number): Either<Failure, Money> {
     if (value === null || value === undefined) return left(new Failure('Money cannot be empty'));
-    if (value < 0) return left(new Failure('Money cannot be negative'));
+    if (value < 0) return left(new Failure('Money cannot be a negative number'));
 
     const money = new Money(value, CurrencyCode.PLN);
     return right(money);
