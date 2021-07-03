@@ -32,19 +32,13 @@ export class Trip {
     this._date = date;
   }
 
-  static of(id: Uuid, distance: number, netPrice: number, date: Date): Either<Failure, Trip> {
+  static of(id: Uuid, distance: Distance, netPrice: Money, date: Date): Either<Failure, Trip> {
     if (!id) return left(new Failure('Cannot create a trip without an id'));
-
-    const distanceResult = Distance.of(distance);
-    if (!distanceResult.isRight()) return left(distanceResult.value);
-
-    const netPriceResult = Money.of(netPrice);
-    if (!netPriceResult.isRight()) return left(netPriceResult.value);
 
     if (!(date instanceof Date))
       return left(new Failure('Cannot create a trip with an invalid date'));
 
-    const trip = new Trip(id, distanceResult.value, netPriceResult.value, date);
+    const trip = new Trip(id, distance, netPrice, date);
     return right(trip);
   }
 }
