@@ -24,6 +24,10 @@ export class TripService {
     netPrice: number,
     date: Date,
   ) {
+    if (!startAddress || !destinationAddress) {
+      throw new ApplicationException('Both addresses are required');
+    }
+
     const distance = await this._distanceResolver.resolve(startAddress, destinationAddress);
     const netPriceResult = Money.of(netPrice);
     if (!netPriceResult.isRight()) {
