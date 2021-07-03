@@ -1,12 +1,22 @@
 import { Controller, Get } from '@nestjs/common';
+import { StatisticsService } from '../logic/statistics.service';
 import { GetMonthlyStatsDto } from './dto/get-monthly-stats.dto';
 import { GetWeeklyStatsDto } from './dto/get-weekly-stats.dto';
 
 @Controller('/stats')
 export class StatisticsController {
+  constructor(private readonly _statisticsService: StatisticsService) {}
+
   @Get('/weekly')
   async getWeekly(): Promise<GetWeeklyStatsDto> {
-    return new GetWeeklyStatsDto(10, 'km', 100, 'pln');
+    const result = await this._statisticsService.getWeekly();
+
+    return new GetWeeklyStatsDto(
+      result.totalDistance,
+      result.distanceMeasurementUnit,
+      result.totalNetPrice,
+      result.currencyCode,
+    );
   }
 
   @Get('/monthly')

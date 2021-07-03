@@ -11,6 +11,7 @@ import { TripModule } from './trip/trip.module';
       database: 'bikeramp',
       entities: [TripEntity],
       synchronize: true,
+      logging: true,
     }),
     TripModule,
     StatisticsModule,
