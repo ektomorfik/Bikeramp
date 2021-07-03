@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { TripController } from './presentation/trip.controller';
+import { TripController } from './adapters/presentation/trip.controller';
 
 @Module({
   controllers: [TripController],
