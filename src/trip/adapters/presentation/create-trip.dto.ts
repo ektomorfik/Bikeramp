@@ -1,12 +1,14 @@
 import { Expose } from 'class-transformer';
-import { IsDate, IsPositive } from 'class-validator';
+import { IsDate, IsNotEmpty, IsPositive } from 'class-validator';
 
 export class CreateTripDto {
   @Expose({ name: 'start_address' })
-  startAddress!: string; //todo validation
+  @IsNotEmpty()
+  startAddress!: string;
 
   @Expose({ name: 'destination_address' })
-  destinationAddress!: string; //todo validation
+  @IsNotEmpty()
+  destinationAddress!: string;
 
   @IsPositive()
   price!: number;
