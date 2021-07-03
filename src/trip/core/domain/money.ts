@@ -15,7 +15,7 @@ export class Money {
     if (value === null || value === undefined) return left(new Failure('Money cannot be empty'));
     if (value < 0) return left(new Failure('Money cannot be a negative number'));
 
-    const money = new Money(value, CurrencyCode.PLN);
+    const money = new Money(+value.toFixed(2), CurrencyCode.PLN);
     return right(money);
   }
 }
