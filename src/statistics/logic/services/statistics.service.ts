@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { TripEntity } from 'src/shared/database/trip.entity';
 import { NullableProps } from 'src/shared/types/nullable-props.type';
 import { Connection } from 'typeorm';
-import { DateTimeHelper } from './helpers/date-time.helper';
-import { GetMonthlyStatsQueryResult } from './models/get-monthly-stats-query-result';
-import { GetWeeklyStatsQueryResult } from './models/get-weekly-stats-query-result';
+import { DateTimeHelper } from '../helpers/date-time.helper';
+import { GetMonthlyStatsQueryResult } from '../models/get-monthly-stats-query-result';
+import { GetWeeklyStatsQueryResult } from '../models/get-weekly-stats-query-result';
 
 @Injectable()
 export class StatisticsService {
