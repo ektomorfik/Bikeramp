@@ -1,5 +1,5 @@
 import { Expose } from 'class-transformer';
-import { IsDate, IsNotEmpty, IsNumber } from 'class-validator';
+import { IsDateString, IsNotEmpty, IsNumber } from 'class-validator';
 
 export class CreateTripDto {
   @Expose({ name: 'start_address' })
@@ -13,6 +13,6 @@ export class CreateTripDto {
   @IsNumber()
   price!: number;
 
-  @IsDate()
-  date!: Date;
+  @IsDateString()
+  date!: string;
 }

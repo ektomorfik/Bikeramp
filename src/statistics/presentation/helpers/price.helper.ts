@@ -1,5 +1,5 @@
 export class PriceHelper {
   static format(netPrice: number, currencyCode: string): string {
-    return `${netPrice}${currencyCode.toLocaleUpperCase()}`;
+    return `${netPrice.toFixed(2)}${currencyCode.toLocaleUpperCase()}`;
   }
 }

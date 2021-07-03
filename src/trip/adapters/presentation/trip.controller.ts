@@ -11,7 +11,7 @@ export class TripController {
     console.log(dto);
     const { startAddress, destinationAddress, price, date } = dto;
     const id = Uuid.new();
-    await this._tripService.create(id, startAddress, destinationAddress, price, date);
+    await this._tripService.create(id, startAddress, destinationAddress, price, new Date(date));
     //note: I am not returning location header because the resource is not accessible via GET method
   }
 }

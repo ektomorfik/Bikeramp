@@ -18,7 +18,7 @@ export class TripEntity {
   currencyCode!: string;
 
   @Column()
-  dateUtc!: Date;
+  date!: Date;
 
   private constructor() {
     //
@@ -30,7 +30,7 @@ export class TripEntity {
     distanceMeasurementUnit: string,
     netPrice: number,
     currencyCode: string,
-    dateUtc: Date,
+    date: Date,
   ): TripEntity {
     const entity = new TripEntity();
     entity.id = id;
@@ -38,7 +38,7 @@ export class TripEntity {
     entity.distanceMeasurementUnit = distanceMeasurementUnit;
     entity.netPrice = netPrice;
     entity.currencyCode = currencyCode;
-    entity.dateUtc = dateUtc;
+    entity.date = date;
     return entity;
   }
 }
