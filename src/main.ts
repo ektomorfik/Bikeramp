@@ -1,6 +1,7 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { ExceptionInterceptor } from './infrastructure/interceptors/exception.interceptor';
 
 //todo: should be injected via config
 const GLOBAL_URL_PREFIX = '/api';
@@ -17,6 +18,8 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
+
+  app.useGlobalInterceptors(new ExceptionInterceptor());
 
   await app.listen(PORT);
 }
