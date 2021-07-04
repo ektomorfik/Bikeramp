@@ -6,7 +6,8 @@ import { IDistanceResolvingService } from '../ports/distance-resolving-service.i
 @Injectable()
 export class InMemoryDistanceResolvingService implements IDistanceResolvingService {
   async resolve(startAddress: string, destinationAddress: string): Promise<Distance> {
-    const result = Distance.of(100);
+    const randomDistanceKm = Math.trunc(Math.random() * 15);
+    const result = Distance.of(randomDistanceKm);
     if (!result.isRight()) {
       throw new ApplicationException(result.value.message);
     }

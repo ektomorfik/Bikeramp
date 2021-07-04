@@ -34,7 +34,8 @@ export class Trip {
 
   static of(id: Uuid, distance: Distance, netPrice: Money, date: Date): Either<Failure, Trip> {
     if (!id) return left(new Failure('Cannot create a trip without an id'));
-
+    if (!distance) return left(new Failure('Cannot create a trip without distance'));
+    if (!netPrice) return left(new Failure('Cannot create a trip without price'));
     if (!(date instanceof Date))
       return left(new Failure('Cannot create a trip with an invalid date'));
 
