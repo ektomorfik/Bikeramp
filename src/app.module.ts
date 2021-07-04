@@ -10,8 +10,7 @@ import { TripModule } from './trip/trip.module';
       type: 'better-sqlite3',
       database: 'bikeramp',
       entities: [TripEntity],
-      synchronize: true,
-      logging: true,
+      synchronize: true, //note: in real-life application synchronize should be set to false and db schema should be managed by migrations
     }),
     TripModule,
     StatisticsModule,

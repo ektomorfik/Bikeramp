@@ -6,6 +6,7 @@ import { CreateTripDto } from './create-trip.dto';
 @Controller('/trips')
 export class TripController {
   constructor(private readonly _tripService: TripService) {}
+
   @Post()
   async create(@Body() dto: CreateTripDto) {
     console.log(dto);
