@@ -4,6 +4,6 @@ Content-Type: application/json
 {
   "start_address": "Plac Europejski 2, Warszawa, Polska",
   "destination_address": "Plac Europejski 2, Warszawa, Polska",
-  "price": 23.11,
-  "date": "2021-07-22"
+  "price": 32,
+  "date": "2021-07-04"
 }
