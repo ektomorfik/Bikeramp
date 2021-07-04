@@ -49,4 +49,9 @@ describe('TripService', () => {
       tripService.create(Uuid.new(), ADDRESS, ADDRESS, 0, undefined as any),
     ).rejects.toThrowError(ApplicationException);
   });
+  it('should not allow to create a trip ahead', async () => {
+    await expect(
+      tripService.create(Uuid.new(), ADDRESS, ADDRESS, 0, new Date(2030, 10, 10)),
+    ).rejects.toThrowError(ApplicationException);
+  });
 });
