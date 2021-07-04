@@ -28,6 +28,5 @@ export class TripDao implements ITripDao {
     );
 
     await this._tripRepository.save(entity);
-    console.log(entity);
   }
 }

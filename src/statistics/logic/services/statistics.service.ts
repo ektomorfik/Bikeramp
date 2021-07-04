@@ -45,7 +45,7 @@ export class StatisticsService {
       .where(`trip.date BETWEEN '${startOfTheMonth}' AND '${endOfTheMonth}'`)
       .groupBy('trip.date')
       .getRawMany<GetMonthlyStatsQueryResult>();
-    console.log(result);
+
     return result;
   }
 }

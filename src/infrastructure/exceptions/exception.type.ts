@@ -1,3 +1,3 @@
 export enum Exceptions {
-  applicationException = 'ApplicationException',
+  ApplicationException = 'ApplicationException',
 }

@@ -9,7 +9,6 @@ export class TripController {
 
   @Post()
   async create(@Body() dto: CreateTripDto) {
-    console.log(dto);
     const { startAddress, destinationAddress, price, date } = dto;
     const id = Uuid.new();
     await this._tripService.create(id, startAddress, destinationAddress, price, new Date(date));

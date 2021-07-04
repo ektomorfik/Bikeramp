@@ -40,6 +40,5 @@ export class TripService {
     }
 
     await this._tripDao.save(tripResult.value);
-    console.log(tripResult.value);
   }
 }
