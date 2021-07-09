@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DistanceResolvingServiceToken } from 'src/infrastructure/di/distance-resolving-service.token';
-import { TripDaoToken } from 'src/infrastructure/di/trip-dao.token';
-import { TripEntity } from 'src/shared/database/trip.entity';
+import { DistanceResolvingServiceToken } from '../infrastructure/di/distance-resolving-service.token';
+import { TripDaoToken } from '../infrastructure/di/trip-dao.token';
+import { TripEntity } from '../shared/database/trip.entity';
 import { TripDao } from './adapters/persistence/trip.dao';
 import { TripController } from './adapters/presentation/trip.controller';
 import { InMemoryDistanceResolvingService } from './core/infrastructure/in-memory-distance-resolving.service';

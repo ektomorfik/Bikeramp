@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TripEntity } from 'src/shared/database/trip.entity';
+import { TripEntity } from '../../../shared/database/trip.entity';
 import { Repository } from 'typeorm';
 import { Trip } from '../../core/domain/trip';
 import { Uuid } from '../../core/domain/Uuid';

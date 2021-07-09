@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { TripEntity } from 'src/shared/database/trip.entity';
-import { NullableProps } from 'src/shared/types/nullable-props.type';
+import { TripEntity } from '../../../shared/database/trip.entity';
+import { NullableProps } from '../../../shared/types/nullable-props.type';
 import { Connection } from 'typeorm';
 import { DateTimeHelper } from '../helpers/date-time.helper';
 import { GetMonthlyStatsQueryResult } from '../models/get-monthly-stats-query-result';

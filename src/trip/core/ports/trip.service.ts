@@ -4,9 +4,9 @@ import { Trip } from '../domain/trip';
 import { Uuid } from '../domain/Uuid';
 import { DistanceResolvingServiceToken } from '../../../infrastructure/di/distance-resolving-service.token';
 import { IDistanceResolvingService } from './distance-resolving-service.interface';
-import { ApplicationException } from 'src/infrastructure/exceptions/application.exception';
+import { ApplicationException } from '../../../infrastructure/exceptions/application.exception';
 import { ITripDao } from './trip-dao.interface';
-import { TripDaoToken } from 'src/infrastructure/di/trip-dao.token';
+import { TripDaoToken } from '../../../infrastructure/di/trip-dao.token';
 
 @Injectable()
 export class TripService {

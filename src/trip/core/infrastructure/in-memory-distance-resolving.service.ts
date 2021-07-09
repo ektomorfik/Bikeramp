@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ApplicationException } from 'src/infrastructure/exceptions/application.exception';
+import { ApplicationException } from '../../../infrastructure/exceptions/application.exception';
 import { Distance } from '../domain/distance';
 import { IDistanceResolvingService } from '../ports/distance-resolving-service.interface';
 

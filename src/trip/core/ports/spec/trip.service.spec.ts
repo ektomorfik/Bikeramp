@@ -1,4 +1,4 @@
-import { ApplicationException } from 'src/infrastructure/exceptions/application.exception';
+import { ApplicationException } from '../../../../infrastructure/exceptions/application.exception';
 import { Uuid } from '../../domain/Uuid';
 import { InMemoryDistanceResolvingService } from '../../infrastructure/in-memory-distance-resolving.service';
 import { InMemoryTripDao } from '../../infrastructure/in-memory-trip.dao';

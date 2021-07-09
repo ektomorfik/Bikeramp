@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { Uuid } from 'src/trip/core/domain/Uuid';
-import { TripService } from 'src/trip/core/ports/trip.service';
+import { Uuid } from '../../../trip/core/domain/Uuid';
+import { TripService } from '../../../trip/core/ports/trip.service';
 import { CreateTripDto } from './create-trip.dto';
 
 @Controller('/trips')

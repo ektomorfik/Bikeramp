@@ -1,5 +1,5 @@
-import { Either, left, right } from 'src/shared/common/either';
-import { Failure } from 'src/shared/common/failure';
+import { Either, left, right } from '../../../shared/common/either';
+import { Failure } from '../../../shared/common/failure';
 import { DistanceMeasurementUnit } from './distance-measurement-unit';
 
 export class Distance {
